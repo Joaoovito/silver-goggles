@@ -7,7 +7,7 @@
     "status": "em_andamento",
     "faseAtual": "Abertura da sessão e leitura do relatório",
     "ministroFalando": "edson-fachin",
-    "resumoFala": "Fachin, presidente e relator, conduz a abertura da sessão e faz a leitura do relatório do caso.",
+    "resumoFala": "Fachin discursa sobre a independência do STF e a colegialidade da decisão, e descreve o objeto do julgamento: a Pet 16.662, aberta após mensagens que associam Moraes a Vorcaro.",
     "inclinacao": {
       "valor": 50,
       "fonte": "manual",
@@ -135,6 +135,10 @@
     {
       "hora": "2026-09-15T10:22:58-03:00",
       "evento": "Sessão extraordinária do STF aberta às 10h para julgar a Pet 16.662."
+    },
+    {
+      "hora": "2026-09-15T10:47:00-03:00",
+      "evento": "Fachin discursa sobre independência do STF ('a divergência é legítima, o confronto pessoal não') e descreve o objeto do julgamento."
     }
   ]
 }
