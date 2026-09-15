@@ -4,15 +4,15 @@
     "assunto": "Abertura de investigação contra o ministro Alexandre de Moraes",
     "data": "2026-09-15",
     "horaPrevista": "10:00",
-    "status": "em_andamento",
-    "faseAtual": "Votação de questão de ordem: unificar julgamentos de Moraes e Mendonça (placar 3x1 pela unificação)",
-    "ministroFalando": "cristiano-zanin",
-    "resumoFala": "Zanin concluiu seu voto a favor de unificar os julgamentos de Moraes e Mendonça. Placar da questão de ordem: 3x1 (Gilmar Mendes, Zanin e Dino a favor; Fachin contra).",
+    "status": "vista",
+    "faseAtual": "Sessão encerrada por pedido de vista de Flávio Dino — julgamento suspenso (até 90 dias para ele devolver)",
+    "ministroFalando": null,
+    "resumoFala": "",
     "inclinacao": {
       "valor": 35,
       "fonte": "auto",
-      "atualizadoEm": "2026-09-15T16:52:00-03:00",
-      "nota": "Zanin, Dino e Gilmar Mendes votaram juntos pela unificação dos julgamentos de Moraes e Mendonça — segundo especialistas ouvidos pela BBC, isso tenderia a favorecer Moraes (mais tempo, votação mais diluída). Ainda é voto procedimental, não de mérito."
+      "atualizadoEm": "2026-09-15T18:39:00-03:00",
+      "nota": "Sessão suspensa antes de qualquer voto de mérito. Estimativa mantida do tom observado até aqui (Dino, Zanin e Gilmar Mendes mais céticos em relação à condução da apuração)."
     }
   },
   "ministros": [
@@ -38,14 +38,14 @@
       "cargo": "Ministro",
       "desde": 2024,
       "ordem": 1,
-      "status": "aguardando",
+      "status": "pediu_vista",
       "voto": null,
       "possivelImpedimento": false,
       "tendencia": {
         "valor": 32,
         "fonte": "auto",
-        "atualizadoEm": "2026-09-15T16:52:00-03:00",
-        "nota": "Criticou duramente a retirada da relatoria de Mendonça ('momento mais corrupto da história' do Judiciário) e votou pela unificação dos julgamentos de Moraes e Mendonça — tom cético em relação à condução da apuração."
+        "atualizadoEm": "2026-09-15T18:39:00-03:00",
+        "nota": "Criticou duramente a retirada da relatoria de Mendonça ('momento mais corrupto da história' do Judiciário), votou pela unificação e, após bate-boca entre colegas, pediu vista chamando a sessão de 'desastrada'."
       }
     },
     {
@@ -74,10 +74,10 @@
       "voto": null,
       "possivelImpedimento": true,
       "tendencia": {
-        "valor": 62,
+        "valor": 63,
         "fonte": "auto",
-        "atualizadoEm": "2026-09-15T16:35:00-03:00",
-        "nota": "Defendeu suas próprias decisões que originaram a apuração contra Moraes, argumentando que seguiram o padrão de supervisão adotado no caso — postura de defesa da investigação."
+        "atualizadoEm": "2026-09-15T18:39:00-03:00",
+        "nota": "Defendeu suas próprias decisões que originaram a apuração e entrou em discussão exaltada com Gilmar Mendes e Moraes defendendo a condução da investigação — postura combativa de defesa da apuração."
       }
     },
     {
@@ -138,10 +138,10 @@
       "voto": null,
       "possivelImpedimento": false,
       "tendencia": {
-        "valor": 50,
-        "fonte": "manual",
-        "atualizadoEm": null,
-        "nota": ""
+        "valor": 54,
+        "fonte": "auto",
+        "atualizadoEm": "2026-09-15T18:39:00-03:00",
+        "nota": "Votou por manter o julgamento de Moraes separado (não unificar com o de Mendonça), seguindo a sessão de hoje — leve sinal de preferir resolver o caso sem diluir."
       }
     },
     {
@@ -170,10 +170,10 @@
       "voto": null,
       "possivelImpedimento": false,
       "tendencia": {
-        "valor": 50,
-        "fonte": "manual",
-        "atualizadoEm": null,
-        "nota": ""
+        "valor": 52,
+        "fonte": "auto",
+        "atualizadoEm": "2026-09-15T18:39:00-03:00",
+        "nota": "Votou por manter o julgamento hoje (não unificar), mas seu discurso foi sobre tristeza com a 'espetacularização' da sessão, não uma posição de mérito — sinal fraco."
       }
     },
     {
@@ -186,10 +186,10 @@
       "voto": null,
       "possivelImpedimento": false,
       "tendencia": {
-        "valor": 30,
+        "valor": 27,
         "fonte": "auto",
-        "atualizadoEm": "2026-09-15T16:52:00-03:00",
-        "nota": "Chamou o afastamento do diretor-geral da PF por Mendonça de 'vexame' ('pixuleco, boneco eleitoral') e votou pela unificação dos julgamentos de Moraes e Mendonça — tom cético em relação à investigação."
+        "atualizadoEm": "2026-09-15T18:39:00-03:00",
+        "nota": "Chamou o afastamento do diretor-geral da PF de 'vexame', votou pela unificação e teve discussão exaltada com Mendonça defendendo Gonet ('desfaçatez de vossa excelência') — tom seguidamente cético em relação à apuração."
       }
     }
   ],
@@ -225,6 +225,10 @@
     {
       "hora": "2026-09-15T16:52:00-03:00",
       "evento": "Placar da questão de ordem sobre unificação está 3x1: Gilmar Mendes, Zanin e Dino a favor de unificar os julgamentos de Moraes e Mendonça; Fachin contra."
+    },
+    {
+      "hora": "2026-09-15T18:26:00-03:00",
+      "evento": "Placar da questão de ordem empata em 4x4 (Fux e Cármen Lúcia votam por manter separado). Após bate-boca entre Mendonça e Gilmar Mendes, Dino pede vista e Fachin encerra a sessão — julgamento suspenso por até 90 dias."
     }
   ]
 }
