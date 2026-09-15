@@ -5,14 +5,14 @@
     "data": "2026-09-15",
     "horaPrevista": "10:00",
     "status": "em_andamento",
-    "faseAtual": "Votação de questão de ordem: unificar julgamentos de Moraes e Mendonça",
-    "ministroFalando": "flavio-dino",
-    "resumoFala": "Sessão retomada após intervalo. Ministros votam questão de ordem sobre unificar os julgamentos de Moraes e Mendonça: Fachin já votou contra a unificação; Dino vota agora a favor, defendendo um rito único.",
+    "faseAtual": "Votação de questão de ordem: unificar julgamentos de Moraes e Mendonça (placar 3x1 pela unificação)",
+    "ministroFalando": "cristiano-zanin",
+    "resumoFala": "Zanin concluiu seu voto a favor de unificar os julgamentos de Moraes e Mendonça. Placar da questão de ordem: 3x1 (Gilmar Mendes, Zanin e Dino a favor; Fachin contra).",
     "inclinacao": {
       "valor": 35,
       "fonte": "auto",
-      "atualizadoEm": "2026-09-15T16:20:00-03:00",
-      "nota": "Estimativa baseada no tom das falas: Dino e Gilmar Mendes fizeram críticas duras à conduta de Mendonça na apuração, sugerindo ceticismo em relação à investigação. Nenhum voto de mérito foi declarado ainda."
+      "atualizadoEm": "2026-09-15T16:52:00-03:00",
+      "nota": "Zanin, Dino e Gilmar Mendes votaram juntos pela unificação dos julgamentos de Moraes e Mendonça — segundo especialistas ouvidos pela BBC, isso tenderia a favorecer Moraes (mais tempo, votação mais diluída). Ainda é voto procedimental, não de mérito."
     }
   },
   "ministros": [
@@ -44,8 +44,8 @@
       "tendencia": {
         "valor": 32,
         "fonte": "auto",
-        "atualizadoEm": "2026-09-15T16:35:00-03:00",
-        "nota": "Criticou duramente a retirada da relatoria de Mendonça e chamou o momento de 'mais corrupto da história' do Judiciário — tom cético em relação à condução da apuração contra Moraes."
+        "atualizadoEm": "2026-09-15T16:52:00-03:00",
+        "nota": "Criticou duramente a retirada da relatoria de Mendonça ('momento mais corrupto da história' do Judiciário) e votou pela unificação dos julgamentos de Moraes e Mendonça — tom cético em relação à condução da apuração."
       }
     },
     {
@@ -58,10 +58,10 @@
       "voto": null,
       "possivelImpedimento": false,
       "tendencia": {
-        "valor": 50,
-        "fonte": "manual",
-        "atualizadoEm": null,
-        "nota": ""
+        "valor": 38,
+        "fonte": "auto",
+        "atualizadoEm": "2026-09-15T16:52:00-03:00",
+        "nota": "Votou a favor de unificar os julgamentos de Moraes e Mendonça, alinhado a Dino e Gilmar Mendes — segundo especialistas, cenário que tenderia a favorecer Moraes."
       }
     },
     {
@@ -188,8 +188,8 @@
       "tendencia": {
         "valor": 30,
         "fonte": "auto",
-        "atualizadoEm": "2026-09-15T16:35:00-03:00",
-        "nota": "Chamou o afastamento do diretor-geral da PF por Mendonça de 'vexame' e criticou a condução da apuração como motivada politicamente ('pixuleco, boneco eleitoral') — tom cético em relação à investigação."
+        "atualizadoEm": "2026-09-15T16:52:00-03:00",
+        "nota": "Chamou o afastamento do diretor-geral da PF por Mendonça de 'vexame' ('pixuleco, boneco eleitoral') e votou pela unificação dos julgamentos de Moraes e Mendonça — tom cético em relação à investigação."
       }
     }
   ],
@@ -221,6 +221,10 @@
     {
       "hora": "2026-09-15T16:00:00-03:00",
       "evento": "Sessão retomada após intervalo (havia sido suspensa por causa do horário eleitoral). Votação de questão de ordem sobre unificar julgamento de Moraes e Mendonça: Fachin vota contra, Dino vota a favor."
+    },
+    {
+      "hora": "2026-09-15T16:52:00-03:00",
+      "evento": "Placar da questão de ordem sobre unificação está 3x1: Gilmar Mendes, Zanin e Dino a favor de unificar os julgamentos de Moraes e Mendonça; Fachin contra."
     }
   ]
 }
