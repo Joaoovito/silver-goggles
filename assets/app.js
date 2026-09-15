@@ -25,6 +25,13 @@ function escapeHtml(str) {
   }[c]));
 }
 
+function truncate(str, max) {
+  if (str.length <= max) return str;
+  const cut = str.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut) + '…';
+}
+
 function fmtTime(iso) {
   if (!iso) return "—";
   const d = new Date(iso);
@@ -72,6 +79,11 @@ function render(data) {
   const speaker = s.ministroFalando ? ministers.find(m => m.id === s.ministroFalando) : null;
   document.getElementById('speaking-name').textContent = speaker ? speaker.nome : 'Ninguém no momento';
   document.getElementById('speaking-role').textContent = speaker ? (speaker.cargo + ' · ' + (s.faseAtual || '')) : (s.faseAtual || '');
+
+  const summaryEl = document.getElementById('speaking-summary');
+  const resumo = truncate((s.resumoFala || '').trim(), 180);
+  summaryEl.textContent = resumo;
+  summaryEl.hidden = !resumo;
 
   const val = Math.max(0, Math.min(100, (s.inclinacao && s.inclinacao.valor) ?? 50));
   document.getElementById('ruler-marker').style.left = val + '%';

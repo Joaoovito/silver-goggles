@@ -94,6 +94,7 @@ function populateForm(data) {
   const s = data.session;
   $('s-status').value = s.status;
   $('s-fase').value = s.faseAtual || '';
+  $('s-resumo').value = s.resumoFala || '';
   $('s-inclinacao').value = (s.inclinacao && s.inclinacao.valor) ?? 50;
   $('s-inclinacao-val').textContent = $('s-inclinacao').value;
   $('s-nota').value = (s.inclinacao && s.inclinacao.nota) || '';
@@ -152,6 +153,7 @@ function collectFormData(base) {
   const data = JSON.parse(JSON.stringify(base || currentData));
   data.session.status = $('s-status').value;
   data.session.faseAtual = $('s-fase').value;
+  data.session.resumoFala = $('s-resumo').value.trim();
   data.session.ministroFalando = $('s-falando').value || null;
   data.session.inclinacao = {
     valor: Number($('s-inclinacao').value),

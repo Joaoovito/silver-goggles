@@ -7,6 +7,7 @@
     "status": "aguardando",
     "faseAtual": "A sessão ainda não começou",
     "ministroFalando": null,
+    "resumoFala": "",
     "inclinacao": {
       "valor": 50,
       "fonte": "manual",
