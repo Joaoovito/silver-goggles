@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel de controle — STF ao vivo</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .admin-panel { display: flex; flex-direction: column; gap: 10px; }
+  .admin-panel label { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); display: block; margin-bottom: 3px; }
+  .admin-panel input[type=text], .admin-panel input[type=password], .admin-panel select, .admin-panel textarea {
+    width: 100%; padding: 8px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit;
+  }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .row3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; align-items: end; }
+  button { padding: 10px 16px; border: 1px solid var(--line-strong); background: var(--ink); color: var(--paper); font: inherit; cursor: pointer; }
+  button.secondary { background: transparent; color: var(--ink); }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  .minister-edit-row { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); }
+  #log { font-size: 13px; white-space: pre-wrap; padding: 10px; border: 1px dashed var(--line); min-height: 20px; }
+  #log.ok { color: var(--abrir); }
+  #log.err { color: var(--arquivar); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div>
+      <h1>Painel de controle</h1>
+      <p>Não linkado publicamente. Guarde este URL só para quem for operar o placar.</p>
+    </div>
+  </header>
+
+  <div class="panel admin-panel">
+    <h2 style="margin-top:0">1. Conexão com o GitHub</h2>
+    <div class="row3">
+      <div><label>owner/repositório (ex: usuario/stf-dashboard)</label><input type="text" id="cfg-repo"></div>
+      <div><label>Branch</label><input type="text" id="cfg-branch" value="main"></div>
+      <div><label>Arquivo</label><input type="text" id="cfg-path" value="data.json"></div>
+    </div>
+    <div>
+      <label>Personal Access Token (fine-grained, só com permissão de conteúdo neste repo)</label>
+      <input type="password" id="cfg-token">
+    </div>
+    <div style="display:flex; gap:10px;">
+      <button class="secondary" id="btn-save-cfg">Salvar configuração neste navegador</button>
+      <button id="btn-load">Carregar estado atual</button>
+    </div>
+    <div id="log"></div>
+  </div>
+
+  <div class="panel admin-panel" id="session-panel" style="display:none">
+    <h2 style="margin-top:0">2. Sessão</h2>
+    <div class="row2">
+      <div>
+        <label>Status da sessão</label>
+        <select id="s-status">
+          <option value="aguardando">Aguardando início</option>
+          <option value="em_andamento">Em andamento</option>
+          <option value="vista">Suspensa (pedido de vista)</option>
+          <option value="encerrada">Encerrada</option>
+        </select>
+      </div>
+      <div>
+        <label>Ministro falando agora</label>
+        <select id="s-falando"><option value="">Nenhum</option></select>
+      </div>
+    </div>
+    <div>
+      <label>Fase atual (texto livre, ex: "Sustentação oral")</label>
+      <input type="text" id="s-fase">
+    </div>
+    <div>
+      <label>Inclinação (0 = arquivar, 100 = abrir investigação): <span id="s-inclinacao-val">50</span>%</label>
+      <input type="range" id="s-inclinacao" min="0" max="100" value="50">
+    </div>
+    <div>
+      <label>Nota sobre a inclinação (opcional)</label>
+      <input type="text" id="s-nota">
+    </div>
+  </div>
+
+  <div class="panel admin-panel" id="ministers-panel" style="display:none">
+    <h2 style="margin-top:0">3. Ministros</h2>
+    <div id="minister-edit-list"></div>
+  </div>
+
+  <div class="panel admin-panel" id="timeline-panel" style="display:none">
+    <h2 style="margin-top:0">4. Linha do tempo</h2>
+    <ul class="timeline" id="admin-timeline"></ul>
+    <div class="row2">
+      <input type="text" id="new-event" placeholder="Ex: Fachin abre a sessão">
+      <button class="secondary" id="btn-add-event">Adicionar evento</button>
+    </div>
+  </div>
+
+  <div class="panel" id="publish-panel" style="display:none">
+    <button id="btn-publish" style="width:100%; font-size:16px;">Publicar alterações no site</button>
+  </div>
+
+</div>
+<script src="assets/admin.js"></script>
+</body>
+</html>

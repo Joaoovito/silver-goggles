@@ -1,0 +1,33 @@
+{
+  "session": {
+    "titulo": "Pet 16.662",
+    "assunto": "Abertura de investigação contra o ministro Alexandre de Moraes",
+    "data": "2026-09-15",
+    "horaPrevista": "10:00",
+    "status": "aguardando",
+    "faseAtual": "A sessão ainda não começou",
+    "ministroFalando": null,
+    "inclinacao": {
+      "valor": 50,
+      "fonte": "manual",
+      "atualizadoEm": null,
+      "nota": ""
+    }
+  },
+  "ministros": [
+    { "id": "edson-fachin", "nome": "Edson Fachin", "cargo": "Presidente e Relator", "desde": 2015, "ordem": 0, "status": "aguardando", "voto": null, "possivelImpedimento": false },
+    { "id": "flavio-dino", "nome": "Flávio Dino", "cargo": "Ministro", "desde": 2024, "ordem": 1, "status": "aguardando", "voto": null, "possivelImpedimento": false },
+    { "id": "cristiano-zanin", "nome": "Cristiano Zanin", "cargo": "Ministro", "desde": 2023, "ordem": 2, "status": "aguardando", "voto": null, "possivelImpedimento": false },
+    { "id": "andre-mendonca", "nome": "André Mendonça", "cargo": "Ministro", "desde": 2021, "ordem": 3, "status": "aguardando", "voto": null, "possivelImpedimento": true },
+    { "id": "kassio-nunes-marques", "nome": "Kássio Nunes Marques", "cargo": "Ministro", "desde": 2020, "ordem": 4, "status": "aguardando", "voto": null, "possivelImpedimento": false },
+    { "id": "alexandre-de-moraes", "nome": "Alexandre de Moraes", "cargo": "Ministro (investigado)", "desde": 2017, "ordem": 5, "status": "aguardando", "voto": null, "possivelImpedimento": true },
+    { "id": "luis-roberto-barroso", "nome": "Luís Roberto Barroso", "cargo": "Ministro", "desde": 2013, "ordem": 6, "status": "aguardando", "voto": null, "possivelImpedimento": false },
+    { "id": "luiz-fux", "nome": "Luiz Fux", "cargo": "Ministro", "desde": 2011, "ordem": 7, "status": "aguardando", "voto": null, "possivelImpedimento": false },
+    { "id": "dias-toffoli", "nome": "Dias Toffoli", "cargo": "Ministro", "desde": 2009, "ordem": 8, "status": "aguardando", "voto": null, "possivelImpedimento": true },
+    { "id": "carmen-lucia", "nome": "Cármen Lúcia", "cargo": "Ministra", "desde": 2006, "ordem": 9, "status": "aguardando", "voto": null, "possivelImpedimento": false },
+    { "id": "gilmar-mendes", "nome": "Gilmar Mendes", "cargo": "Ministro (decano)", "desde": 2002, "ordem": 10, "status": "aguardando", "voto": null, "possivelImpedimento": false }
+  ],
+  "linhaDoTempo": [
+    { "hora": null, "evento": "Painel criado. Aguardando início da sessão amanhã às 10h." }
+  ]
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STF ao vivo — Pet 16.662</title>
+<meta name="description" content="Placar não-oficial, ao vivo, da votação do STF sobre abrir investigação contra o ministro Alexandre de Moraes.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div>
+      <h1>Placar do Plenário</h1>
+      <p>Pet 16.662 — Investigação contra o ministro Alexandre de Moraes · 15/09/2026, 10h</p>
+    </div>
+    <span id="status-pill" class="status-pill">Carregando…</span>
+  </header>
+
+  <div class="panel">
+    <p class="speaking-label">Falando agora</p>
+    <p class="speaking-name" id="speaking-name">—</p>
+    <p class="speaking-role" id="speaking-role">&nbsp;</p>
+
+    <div class="ruler">
+      <div class="ruler-labels">
+        <span class="left">Arquivar</span>
+        <span class="right">Abrir investigação</span>
+      </div>
+      <div class="ruler-track" id="ruler-track">
+        <div class="tick" style="left:50%"></div>
+        <div class="marker" id="ruler-marker" style="left:50%"></div>
+      </div>
+      <div class="ruler-meta">
+        <span id="ruler-source" class="source-tag">—</span>
+        <span class="ruler-value" id="ruler-value">50%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scoreboard">
+    <div class="score-cell"><span class="score-num abrir" id="count-abrir">0</span><span class="score-label">A favor</span></div>
+    <div class="score-cell"><span class="score-num arquivar" id="count-arquivar">0</span><span class="score-label">Contra</span></div>
+    <div class="score-cell"><span class="score-num vista" id="count-vista">0</span><span class="score-label">Pediu vista</span></div>
+    <div class="score-cell"><span class="score-num aguardando" id="count-aguardando">11</span><span class="score-label">Aguardando</span></div>
+  </div>
+
+  <section class="list-section">
+    <h2>Ministros</h2>
+    <div id="minister-list"></div>
+  </section>
+
+  <section class="list-section">
+    <h2>Linha do tempo</h2>
+    <ul class="timeline" id="timeline"></ul>
+  </section>
+
+  <footer>
+    <p><strong>Painel independente e não-oficial.</strong> Feito para acompanhar o andamento da sessão — não é fonte oficial do STF. Estimativas de inclinação marcadas como automáticas são um palpite grosseiro e podem estar erradas; confie no placar de votos confirmados.</p>
+    <p>Transmissão oficial: <a href="https://www.youtube.com/@STF" target="_blank" rel="noopener">canal do STF no YouTube</a>. Última atualização: <span id="updated-at">—</span>.</p>
+  </footer>
+
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
