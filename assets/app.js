@@ -141,15 +141,24 @@ function render(data) {
   ministers.forEach(m => {
     const row = document.createElement('div');
     row.className = 'minister-row' + (m.id === s.ministroFalando ? ' is-speaking' : '');
+    const showTendencia = !m.voto && m.status !== 'impedido' && m.status !== 'pediu_vista';
+    const tVal = showTendencia ? Math.max(0, Math.min(100, (m.tendencia && m.tendencia.valor) ?? 50)) : 50;
+    const tTitle = showTendencia ? escapeHtml((m.tendencia && m.tendencia.nota) || 'Tendência estimada com base no tom das falas.') : '';
     row.innerHTML = `
       <span class="minister-order">${m.ordem}</span>
       ${avatar(m)}
       <div class="minister-name-wrap">
         <div class="minister-name">${escapeHtml(m.nome)}</div>
         <div class="minister-role">${escapeHtml(m.cargo)}${m.possivelImpedimento ? ' · <span class="impedimento-flag">possível impedimento</span>' : ''}</div>
+        ${showTendencia ? `<div class="mini-tendencia" title="${tTitle}">
+          <div class="mini-tendencia-track"><div class="mini-tendencia-marker"></div></div>
+        </div>` : ''}
       </div>
       <span class="status-tag ${avatarClassFor(m)}">${escapeHtml(statusTextFor(m))}</span>
     `;
+    if (showTendencia) {
+      row.querySelector('.mini-tendencia-marker').style.left = tVal + '%';
+    }
     list.appendChild(row);
   });
 

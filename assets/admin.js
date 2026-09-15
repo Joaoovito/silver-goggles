@@ -130,9 +130,18 @@ function populateForm(data) {
         <option value="arquivar">Arquivar</option>
         <option value="abstencao">Abstenção</option>
       </select>
+      <div class="m-tendencia-wrap">
+        <input type="range" class="m-tendencia" min="0" max="100">
+        <span class="m-tendencia-val"></span>
+      </div>
     `;
     row.querySelector('.m-status').value = m.status;
     row.querySelector('.m-voto').value = m.voto || '';
+    const tRange = row.querySelector('.m-tendencia');
+    const tVal = row.querySelector('.m-tendencia-val');
+    tRange.value = (m.tendencia && m.tendencia.valor) ?? 50;
+    tVal.textContent = tRange.value + '%';
+    tRange.addEventListener('input', () => { tVal.textContent = tRange.value + '%'; });
     list.appendChild(row);
   });
 
@@ -168,6 +177,12 @@ function collectFormData(base) {
     if (!m) return;
     m.status = row.querySelector('.m-status').value;
     m.voto = row.querySelector('.m-voto').value || null;
+    m.tendencia = {
+      valor: Number(row.querySelector('.m-tendencia').value),
+      fonte: 'manual',
+      atualizadoEm: new Date().toISOString(),
+      nota: (m.tendencia && m.tendencia.nota) || ''
+    };
   });
 
   data.linhaDoTempo = (data.linhaDoTempo || []).concat(pendingTimelineAdd);
