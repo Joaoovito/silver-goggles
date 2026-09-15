@@ -5,9 +5,9 @@
     "data": "2026-09-15",
     "horaPrevista": "10:00",
     "status": "em_andamento",
-    "faseAtual": "Declarações de impedimento e falas preliminares dos ministros",
-    "ministroFalando": "gilmar-mendes",
-    "resumoFala": "Gilmar Mendes retoma questão de ordem e critica o afastamento preventivo do diretor-geral da PF por Mendonça, chamando a decisão de 'vexame' e comparando-a a afastar o chefe da NASA ou das Forças Armadas.",
+    "faseAtual": "Votação de questão de ordem: unificar julgamentos de Moraes e Mendonça",
+    "ministroFalando": "flavio-dino",
+    "resumoFala": "Sessão retomada após intervalo. Ministros votam questão de ordem sobre unificar os julgamentos de Moraes e Mendonça: Fachin já votou contra a unificação; Dino vota agora a favor, defendendo um rito único.",
     "inclinacao": {
       "valor": 50,
       "fonte": "manual",
@@ -151,6 +151,10 @@
     {
       "hora": "2026-09-15T12:20:00-03:00",
       "evento": "Fachin nega 'avocatória' na retirada da relatoria de Mendonça; Mendonça toma a palavra para justificar o encaminhamento do caso a Fachin."
+    },
+    {
+      "hora": "2026-09-15T16:00:00-03:00",
+      "evento": "Sessão retomada após intervalo (havia sido suspensa por causa do horário eleitoral). Votação de questão de ordem sobre unificar julgamento de Moraes e Mendonça: Fachin vota contra, Dino vota a favor."
     }
   ]
 }
