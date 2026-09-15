@@ -11,7 +11,7 @@
     "inclinacao": {
       "valor": 50,
       "fonte": "manual",
-      "atualizadoEm": "2026-09-15T03:53:23.815Z",
+      "atualizadoEm": "2026-09-15T12:58:26.192Z",
       "nota": ""
     }
   },
@@ -72,7 +72,7 @@
       "cargo": "Ministro (investigado)",
       "desde": 2017,
       "ordem": 5,
-      "status": "impedido",
+      "status": "aguardando",
       "voto": null,
       "possivelImpedimento": true
     },
