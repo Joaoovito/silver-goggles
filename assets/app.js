@@ -19,6 +19,12 @@ const PERSON_ICON = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.o
   <path d="M4.5 19.2c0-3.9 3.4-5.9 7.5-5.9s7.5 2 7.5 5.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
 </svg>`;
 
+function escapeHtml(str) {
+  return String(str ?? '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+
 function fmtTime(iso) {
   if (!iso) return "—";
   const d = new Date(iso);
@@ -26,9 +32,11 @@ function fmtTime(iso) {
   return d.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
 }
 
+const KNOWN_CLASSES = new Set(['abrir', 'arquivar', 'abstencao', 'pediu_vista', 'impedido', 'falando']);
+
 function avatarClassFor(m) {
-  if (m.voto) return m.voto;
-  if (m.status === 'pediu_vista' || m.status === 'impedido' || m.status === 'falando') return m.status;
+  if (KNOWN_CLASSES.has(m.voto)) return m.voto;
+  if (KNOWN_CLASSES.has(m.status)) return m.status;
   return '';
 }
 
@@ -97,7 +105,7 @@ function render(data) {
       if (list.length === 0) return '';
       let html = `<div class="vote-group-title ${cls}">${title} <span class="n">· ${list.length}</span></div>`;
       list.forEach(m => {
-        html += `<div class="vote-row">${avatar(m)}<span class="vote-name">${m.nome}</span></div>`;
+        html += `<div class="vote-row">${avatar(m)}<span class="vote-name">${escapeHtml(m.nome)}</span></div>`;
       });
       return html;
     };
@@ -114,10 +122,10 @@ function render(data) {
       <span class="minister-order">${m.ordem}</span>
       ${avatar(m)}
       <div class="minister-name-wrap">
-        <div class="minister-name">${m.nome}</div>
-        <div class="minister-role">${m.cargo}${m.possivelImpedimento ? ' · <span class="impedimento-flag">possível impedimento</span>' : ''}</div>
+        <div class="minister-name">${escapeHtml(m.nome)}</div>
+        <div class="minister-role">${escapeHtml(m.cargo)}${m.possivelImpedimento ? ' · <span class="impedimento-flag">possível impedimento</span>' : ''}</div>
       </div>
-      <span class="status-tag ${avatarClassFor(m)}">${statusTextFor(m)}</span>
+      <span class="status-tag ${avatarClassFor(m)}">${escapeHtml(statusTextFor(m))}</span>
     `;
     list.appendChild(row);
   });
@@ -126,7 +134,7 @@ function render(data) {
   tl.innerHTML = '';
   (data.linhaDoTempo || []).slice().reverse().forEach(ev => {
     const li = document.createElement('li');
-    li.innerHTML = `<time>${fmtTime(ev.hora)}</time>${ev.evento}`;
+    li.innerHTML = `<time>${escapeHtml(fmtTime(ev.hora))}</time>${escapeHtml(ev.evento)}`;
     tl.appendChild(li);
   });
 

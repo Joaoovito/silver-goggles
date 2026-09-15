@@ -240,6 +240,8 @@ main.grid {
   height: 10px;
   background: var(--blue-300);
 }
+.ruler-track .tick-center,
+.ruler-track .marker-center { left: 50%; }
 
 .ruler-track .marker {
   position: absolute;
@@ -459,6 +461,8 @@ header.masthead p { margin: 0; color: var(--ink-soft); font-size: 13px; }
 .admin-panel button.secondary { background: var(--blue-50); color: var(--blue-700); }
 .admin-panel button:disabled { opacity: .5; cursor: not-allowed; }
 .minister-edit-row { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.actions-row { display: flex; gap: 10px; }
+.btn-publish-cta { width: 100%; font-size: 16px; }
 #log { font-size: 13px; white-space: pre-wrap; padding: 10px; border: 1px dashed var(--line); border-radius: 6px; min-height: 20px; }
 #log.ok { color: var(--abrir); }
 #log.err { color: var(--arquivar); }

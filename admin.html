@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self' https://api.github.com; script-src 'self'; base-uri 'none'; form-action 'none';">
 <title>Painel de controle — STF ao vivo</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -12,12 +13,12 @@
   <header class="masthead">
     <div>
       <h1>Painel de controle</h1>
-      <p>Não linkado publicamente. Guarde este URL só para quem for operar o placar.</p>
+      <p>O repositório é público, então esta página não é secreta — quem realmente protege as escritas é o seu token do GitHub, guardado só neste navegador. Não use este painel em computador compartilhado e revogue o token assim que a sessão terminar.</p>
     </div>
   </header>
 
   <div class="panel admin-panel">
-    <h2 style="margin-top:0">1. Conexão com o GitHub</h2>
+    <h2>1. Conexão com o GitHub</h2>
     <div class="row3">
       <div><label>owner/repositório (ex: usuario/stf-dashboard)</label><input type="text" id="cfg-repo"></div>
       <div><label>Branch</label><input type="text" id="cfg-branch" value="main"></div>
@@ -27,15 +28,15 @@
       <label>Personal Access Token (fine-grained, só com permissão de conteúdo neste repo)</label>
       <input type="password" id="cfg-token">
     </div>
-    <div style="display:flex; gap:10px;">
+    <div class="actions-row">
       <button class="secondary" id="btn-save-cfg">Salvar configuração neste navegador</button>
       <button id="btn-load">Carregar estado atual</button>
     </div>
     <div id="log"></div>
   </div>
 
-  <div class="panel admin-panel" id="session-panel" style="display:none">
-    <h2 style="margin-top:0">2. Sessão</h2>
+  <div class="panel admin-panel" id="session-panel" hidden>
+    <h2>2. Sessão</h2>
     <div class="row2">
       <div>
         <label>Status da sessão</label>
@@ -65,13 +66,13 @@
     </div>
   </div>
 
-  <div class="panel admin-panel" id="ministers-panel" style="display:none">
-    <h2 style="margin-top:0">3. Ministros</h2>
+  <div class="panel admin-panel" id="ministers-panel" hidden>
+    <h2>3. Ministros</h2>
     <div id="minister-edit-list"></div>
   </div>
 
-  <div class="panel admin-panel" id="timeline-panel" style="display:none">
-    <h2 style="margin-top:0">4. Linha do tempo</h2>
+  <div class="panel admin-panel" id="timeline-panel" hidden>
+    <h2>4. Linha do tempo</h2>
     <ul class="timeline" id="admin-timeline"></ul>
     <div class="row2">
       <input type="text" id="new-event" placeholder="Ex: Fachin abre a sessão">
@@ -79,8 +80,8 @@
     </div>
   </div>
 
-  <div class="panel admin-panel" id="publish-panel" style="display:none">
-    <button id="btn-publish" style="width:100%; font-size:16px;">Publicar alterações no site</button>
+  <div class="panel admin-panel" id="publish-panel" hidden>
+    <button id="btn-publish" class="btn-publish-cta">Publicar alterações no site</button>
   </div>
 
 </div>

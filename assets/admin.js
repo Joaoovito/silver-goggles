@@ -1,8 +1,19 @@
+// Evita que esta página seja carregada dentro de um iframe de outro site (clickjacking).
+if (window.top !== window.self) {
+  window.top.location = window.self.location.href;
+}
+
 let currentData = null;
 let currentSha = null;
 let pendingTimelineAdd = [];
 
 const $ = id => document.getElementById(id);
+
+function escapeHtml(str) {
+  return String(str ?? '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
 
 function log(msg, ok) {
   const el = $('log');
@@ -104,7 +115,7 @@ function populateForm(data) {
     row.className = 'minister-edit-row';
     row.dataset.id = m.id;
     row.innerHTML = `
-      <div><strong>${m.ordem}. ${m.nome}</strong><br><small>${m.cargo}</small></div>
+      <div><strong>${m.ordem}. ${escapeHtml(m.nome)}</strong><br><small>${escapeHtml(m.cargo)}</small></div>
       <select class="m-status">
         <option value="aguardando">Aguardando</option>
         <option value="falando">Falando</option>
@@ -129,12 +140,12 @@ function populateForm(data) {
   (data.linhaDoTempo || []).slice().reverse().forEach(ev => {
     const li = document.createElement('li');
     const t = ev.hora ? new Date(ev.hora).toLocaleString('pt-BR') : '—';
-    li.innerHTML = `<time>${t}</time>${ev.evento}`;
+    li.innerHTML = `<time>${escapeHtml(t)}</time>${escapeHtml(ev.evento)}`;
     tl.appendChild(li);
   });
 
   pendingTimelineAdd = [];
-  ['session-panel', 'ministers-panel', 'timeline-panel', 'publish-panel'].forEach(id => $(id).style.display = '');
+  ['session-panel', 'ministers-panel', 'timeline-panel', 'publish-panel'].forEach(id => { $(id).hidden = false; });
 }
 
 function collectFormData(base) {
@@ -184,7 +195,7 @@ $('btn-add-event').addEventListener('click', () => {
   if (!text) return;
   pendingTimelineAdd.push({ hora: new Date().toISOString(), evento: text });
   const li = document.createElement('li');
-  li.innerHTML = `<time>${new Date().toLocaleString('pt-BR')}</time>${text} <em>(não publicado ainda)</em>`;
+  li.innerHTML = `<time>${escapeHtml(new Date().toLocaleString('pt-BR'))}</time>${escapeHtml(text)} <em>(não publicado ainda)</em>`;
   $('admin-timeline').prepend(li);
   $('new-event').value = '';
 });
