@@ -16,6 +16,12 @@
   --vista: #b8811f;
   --neutro: #96a0ac;
   --radius: 10px;
+  --masthead-bg: #10151d;
+  --masthead-ink: #eef2f6;
+  --masthead-ink-soft: #9aa7b8;
+  --masthead-line: rgba(255, 255, 255, 0.12);
+  --masthead-chip: rgba(255, 255, 255, 0.08);
+  --live-red: #e5342a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,80 +70,94 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 14px 26px;
-  background: var(--panel);
-  border-bottom: 1px solid var(--line);
+  padding: 18px 30px;
+  background: var(--masthead-bg);
+  border-bottom: 3px solid var(--blue-500);
   flex-wrap: wrap;
+}
+
+.topbar-title { display: flex; align-items: center; gap: 14px; }
+
+.topbar-title::before {
+  content: "";
+  width: 6px;
+  align-self: stretch;
+  min-height: 40px;
+  background: var(--blue-500);
+  border-radius: 3px;
 }
 
 .topbar-title h1 {
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 23px;
+  font-weight: 700;
+  font-size: 30px;
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
+  color: var(--masthead-ink);
 }
 
 .topbar-title p {
-  margin: 3px 0 0;
-  font-size: 13.5px;
-  color: var(--ink-soft);
+  margin: 4px 0 0;
+  font-size: 15px;
+  color: var(--masthead-ink-soft);
 }
 
 .topbar-stats {
   display: flex;
-  gap: 22px;
+  gap: 26px;
   margin-left: auto;
 }
 
-.stat { text-align: center; min-width: 44px; }
+.stat { text-align: center; min-width: 52px; }
 
 .stat strong {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 34px;
+  font-weight: 700;
   display: block;
   line-height: 1;
 }
 
 .stat span {
-  font-size: 11px;
+  font-size: 12.5px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--ink-soft);
+  color: var(--masthead-ink-soft);
 }
 
 .stat.abrir strong { color: var(--abrir); }
 .stat.arquivar strong { color: var(--arquivar); }
 .stat.vista strong { color: var(--vista); }
-.stat.aguardando strong { color: var(--neutro); }
+.stat.aguardando strong { color: var(--masthead-ink-soft); }
 
 .status-pill {
-  font-size: 12px;
+  font-size: 13.5px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-weight: 600;
-  padding: 6px 12px;
+  font-weight: 700;
+  padding: 8px 16px;
   border-radius: 100px;
-  background: var(--blue-50);
-  color: var(--blue-700);
+  background: var(--masthead-chip);
+  color: var(--masthead-ink);
+  border: 1px solid var(--masthead-line);
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .status-pill .dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--blue-500);
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--masthead-ink-soft);
 }
 
 .status-pill.live {
-  background: var(--ink);
-  color: var(--ice);
+  background: var(--live-red);
+  color: #fff;
+  border-color: transparent;
 }
 .status-pill.live .dot {
-  background: #5fe0a0;
+  background: #fff;
   animation: pulse 1.6s ease-in-out infinite;
 }
 
@@ -173,12 +193,12 @@ main.grid {
 
 .panel h2 {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 14.5px;
+  font-size: 17px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
   color: var(--ink-soft);
-  margin: 0 0 14px;
+  margin: 0 0 16px;
 }
 
 .panel.grow {
@@ -190,30 +210,30 @@ main.grid {
 /* ---------- hero / speaker ---------- */
 
 .speaking-label {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--blue-500);
-  font-weight: 600;
-  margin: 0 0 6px;
+  font-weight: 700;
+  margin: 0 0 8px;
 }
 
 .speaking-name {
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 34px;
-  margin: 0 0 2px;
+  font-weight: 700;
+  font-size: 46px;
+  margin: 0 0 4px;
   letter-spacing: -0.01em;
 }
 
 .speaking-role {
   color: var(--ink-soft);
-  font-size: 15px;
-  margin: 0 0 14px;
+  font-size: 18px;
+  margin: 0 0 16px;
 }
 
 .speaking-summary {
-  font-size: 14.5px;
+  font-size: 18px;
   line-height: 1.45;
   color: var(--ink);
   background: var(--blue-50);
@@ -227,7 +247,7 @@ main.grid {
 .ruler-labels {
   display: flex;
   justify-content: space-between;
-  font-size: 12.5px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-weight: 700;
@@ -239,8 +259,8 @@ main.grid {
 
 .ruler-track {
   position: relative;
-  height: 20px;
-  border-radius: 10px;
+  height: 26px;
+  border-radius: 13px;
   background: linear-gradient(to right, var(--arquivar) 0%, var(--line) 50%, var(--abrir) 100%);
   margin: 0 2px;
 }
@@ -260,8 +280,8 @@ main.grid {
 .ruler-track .marker {
   position: absolute;
   top: 50%;
-  width: 7px;
-  height: 34px;
+  width: 8px;
+  height: 42px;
   border-radius: 4px;
   background: var(--ink);
   border: 2px solid var(--panel);
@@ -285,7 +305,7 @@ main.grid {
 .ruler-value {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 32px;
   color: var(--ink);
   text-transform: none;
   letter-spacing: normal;
@@ -294,8 +314,8 @@ main.grid {
 /* ---------- avatars ---------- */
 
 .avatar-badge {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -315,7 +335,7 @@ main.grid {
 /* ---------- confirmed votes column ---------- */
 
 .vote-group-title {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 700;
@@ -333,16 +353,16 @@ main.grid {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 2px;
+  padding: 7px 2px;
   border-bottom: 1px solid var(--line);
 }
 .vote-row:last-child, .minister-row:last-child { border-bottom: none; }
 
-.vote-name, .minister-name { font-weight: 600; font-size: 15px; }
-.minister-role { font-size: 12.5px; color: var(--ink-soft); }
+.vote-name, .minister-name { font-weight: 700; font-size: 17px; }
+.minister-role { font-size: 13.5px; color: var(--ink-soft); }
 
 .empty-note {
-  font-size: 13.5px;
+  font-size: 15px;
   color: var(--ink-soft);
   padding: 8px 2px;
 }
@@ -359,9 +379,9 @@ main.grid {
 
 .minister-order {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--ink-soft);
-  width: 18px;
+  width: 20px;
   text-align: right;
   flex-shrink: 0;
 }
@@ -369,7 +389,7 @@ main.grid {
 .minister-name-wrap { flex: 1; min-width: 0; }
 
 .status-tag {
-  font-size: 11.5px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-weight: 600;
@@ -396,7 +416,7 @@ main.grid {
   position: relative;
   padding: 0 0 18px 22px;
   border-left: 2px solid var(--blue-100);
-  font-size: 14.5px;
+  font-size: 16.5px;
 }
 .timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
 
@@ -415,7 +435,7 @@ main.grid {
 .timeline time {
   display: block;
   color: var(--ink-soft);
-  font-size: 12px;
+  font-size: 13.5px;
   margin-bottom: 2px;
   font-variant-numeric: tabular-nums;
 }
@@ -425,7 +445,7 @@ main.grid {
 footer.strip {
   padding: 10px 26px;
   border-top: 1px solid var(--line);
-  font-size: 12.5px;
+  font-size: 13.5px;
   color: var(--ink-soft);
   display: flex;
   justify-content: space-between;
@@ -436,7 +456,7 @@ footer.strip {
 footer.strip a { color: var(--blue-700); }
 
 .source-tag {
-  font-size: 10.5px;
+  font-size: 12.5px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
