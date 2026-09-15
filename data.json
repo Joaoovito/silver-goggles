@@ -9,10 +9,10 @@
     "ministroFalando": "flavio-dino",
     "resumoFala": "Sessão retomada após intervalo. Ministros votam questão de ordem sobre unificar os julgamentos de Moraes e Mendonça: Fachin já votou contra a unificação; Dino vota agora a favor, defendendo um rito único.",
     "inclinacao": {
-      "valor": 50,
-      "fonte": "manual",
-      "atualizadoEm": "2026-09-15T12:58:26.192Z",
-      "nota": ""
+      "valor": 35,
+      "fonte": "auto",
+      "atualizadoEm": "2026-09-15T16:20:00-03:00",
+      "nota": "Estimativa baseada no tom das falas: Dino e Gilmar Mendes fizeram críticas duras à conduta de Mendonça na apuração, sugerindo ceticismo em relação à investigação. Nenhum voto de mérito foi declarado ainda."
     }
   },
   "ministros": [
