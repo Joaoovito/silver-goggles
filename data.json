@@ -11,7 +11,7 @@
     "inclinacao": {
       "valor": 50,
       "fonte": "manual",
-      "atualizadoEm": "2026-09-15T03:51:19.988Z",
+      "atualizadoEm": "2026-09-15T03:52:55.753Z",
       "nota": ""
     }
   },
@@ -32,8 +32,8 @@
       "cargo": "Ministro",
       "desde": 2024,
       "ordem": 1,
-      "status": "impedido",
-      "voto": "arquivar",
+      "status": "aguardando",
+      "voto": null,
       "possivelImpedimento": false
     },
     {
