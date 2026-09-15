@@ -7,7 +7,7 @@
     "status": "em_andamento",
     "faseAtual": "Declarações de impedimento e falas preliminares dos ministros",
     "ministroFalando": "flavio-dino",
-    "resumoFala": "Dino fala agora, após um atrito com Fachin sobre pedido de palavra durante a fala de Toffoli. Kássio Nunes Marques e Toffoli já se declararam fora da votação.",
+    "resumoFala": "Dino questiona a decisão da presidência de retirar a relatoria do processo de Mendonça e diz ser 'o momento mais corrupto da história' do Judiciário, alertando contra uma 'avenida de autoritarismo' nos tribunais.",
     "inclinacao": {
       "valor": 50,
       "fonte": "manual",
@@ -143,6 +143,10 @@
     {
       "hora": "2026-09-15T11:28:00-03:00",
       "evento": "Kássio Nunes Marques se declara impedido (presidente do TSE) e deixa o plenário; Toffoli também diz que não vai votar, mas segue acompanhando a sessão."
+    },
+    {
+      "hora": "2026-09-15T12:00:00-03:00",
+      "evento": "Gilmar Mendes apresenta questão de ordem sobre documento enviado por Dino; em seguida Dino questiona a retirada da relatoria do processo de Mendonça."
     }
   ]
 }
