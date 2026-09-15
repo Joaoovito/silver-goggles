@@ -6,8 +6,8 @@
     "horaPrevista": "10:00",
     "status": "em_andamento",
     "faseAtual": "Abertura da sessão e leitura do relatório",
-    "ministroFalando": null,
-    "resumoFala": "",
+    "ministroFalando": "edson-fachin",
+    "resumoFala": "Fachin, presidente e relator, conduz a abertura da sessão e faz a leitura do relatório do caso.",
     "inclinacao": {
       "valor": 50,
       "fonte": "manual",
