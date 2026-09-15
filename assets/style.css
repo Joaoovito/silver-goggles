@@ -244,6 +244,21 @@ main.grid {
 }
 .speaking-summary[hidden] { display: none; }
 
+.ruler-heading {
+  font-size: 13.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin: 0 0 10px;
+}
+.ruler-heading strong {
+  color: var(--ink);
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
 .ruler-labels {
   display: flex;
   justify-content: space-between;

@@ -85,12 +85,23 @@ function render(data) {
   summaryEl.textContent = resumo;
   summaryEl.hidden = !resumo;
 
-  const val = Math.max(0, Math.min(100, (s.inclinacao && s.inclinacao.valor) ?? 50));
-  document.getElementById('ruler-marker').style.left = val + '%';
-  document.getElementById('ruler-value').textContent = Math.round(val) + '%';
-  const fonte = s.inclinacao && s.inclinacao.fonte === 'auto' ? 'Estimativa automática' : 'Confirmado manualmente';
-  const atualizado = s.inclinacao && s.inclinacao.atualizadoEm ? ' · ' + fmtTime(s.inclinacao.atualizadoEm) : '';
-  document.getElementById('ruler-source').textContent = fonte + atualizado;
+  const gaugeSection = document.getElementById('gauge-section');
+  const gaugeIdleNote = document.getElementById('gauge-idle-note');
+  if (speaker) {
+    gaugeSection.hidden = false;
+    gaugeIdleNote.hidden = true;
+    document.getElementById('ruler-heading-name').textContent = speaker.nome;
+
+    const val = Math.max(0, Math.min(100, (s.inclinacao && s.inclinacao.valor) ?? 50));
+    document.getElementById('ruler-marker').style.left = val + '%';
+    document.getElementById('ruler-value').textContent = Math.round(val) + '%';
+    const fonte = s.inclinacao && s.inclinacao.fonte === 'auto' ? 'Estimativa automática' : 'Confirmado manualmente';
+    const atualizado = s.inclinacao && s.inclinacao.atualizadoEm ? ' · ' + fmtTime(s.inclinacao.atualizadoEm) : '';
+    document.getElementById('ruler-source').textContent = fonte + atualizado;
+  } else {
+    gaugeSection.hidden = true;
+    gaugeIdleNote.hidden = false;
+  }
 
   let abrir = 0, arquivar = 0, vista = 0, aguardando = 0;
   ministers.forEach(m => {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>STF ao vivo — Pet 16.662</title>
+<title>Acompanhamento STF — Investigação contra Moraes</title>
 <meta name="description" content="Placar não-oficial, ao vivo, da votação do STF sobre abrir investigação contra o ministro Alexandre de Moraes.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none';">
 <link rel="stylesheet" href="assets/style.css">
@@ -13,8 +13,8 @@
 
   <header class="topbar">
     <div class="topbar-title">
-      <h1>Sala de Situação — STF</h1>
-      <p>Pet 16.662 · Investigação contra Alexandre de Moraes · 15/09/2026, 10h</p>
+      <h1>Acompanhamento — STF</h1>
+      <p>Investigação contra Alexandre de Moraes · Pet 16.662 · 15/09/2026, 10h</p>
     </div>
     <div class="topbar-stats">
       <div class="stat abrir"><strong id="count-abrir">0</strong><span>Abrir</span></div>
@@ -34,17 +34,21 @@
         <p class="speaking-role" id="speaking-role">&nbsp;</p>
         <p class="speaking-summary" id="speaking-summary" hidden></p>
 
-        <div class="ruler-labels">
-          <span class="left">Arquivar</span>
-          <span class="right">Abrir investigação</span>
+        <div id="gauge-section">
+          <p class="ruler-heading">Tendência do voto de <strong id="ruler-heading-name">—</strong></p>
+          <div class="ruler-labels">
+            <span class="left">Arquivar</span>
+            <span class="right">Abrir investigação</span>
+          </div>
+          <div class="ruler-track" id="ruler-track">
+            <div class="marker marker-center" id="ruler-marker"></div>
+          </div>
+          <div class="ruler-meta">
+            <span id="ruler-source" class="source-tag">—</span>
+            <span class="ruler-value" id="ruler-value">50%</span>
+          </div>
         </div>
-        <div class="ruler-track" id="ruler-track">
-          <div class="marker marker-center" id="ruler-marker"></div>
-        </div>
-        <div class="ruler-meta">
-          <span id="ruler-source" class="source-tag">—</span>
-          <span class="ruler-value" id="ruler-value">50%</span>
-        </div>
+        <p class="empty-note" id="gauge-idle-note" hidden>O indicador de tendência aparece aqui assim que um ministro estiver com a palavra.</p>
       </div>
 
       <div class="panel grow">
