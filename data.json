@@ -5,9 +5,9 @@
     "data": "2026-09-15",
     "horaPrevista": "10:00",
     "status": "em_andamento",
-    "faseAtual": "Abertura da sessão e leitura do relatório",
-    "ministroFalando": "edson-fachin",
-    "resumoFala": "Fachin discursa sobre a independência do STF e a colegialidade da decisão, e descreve o objeto do julgamento: a Pet 16.662, aberta após mensagens que associam Moraes a Vorcaro.",
+    "faseAtual": "Declarações de impedimento e falas preliminares dos ministros",
+    "ministroFalando": "flavio-dino",
+    "resumoFala": "Dino fala agora, após um atrito com Fachin sobre pedido de palavra durante a fala de Toffoli. Kássio Nunes Marques e Toffoli já se declararam fora da votação.",
     "inclinacao": {
       "valor": 50,
       "fonte": "manual",
@@ -62,7 +62,7 @@
       "cargo": "Ministro",
       "desde": 2020,
       "ordem": 4,
-      "status": "aguardando",
+      "status": "impedido",
       "voto": null,
       "possivelImpedimento": false
     },
@@ -102,7 +102,7 @@
       "cargo": "Ministro",
       "desde": 2009,
       "ordem": 8,
-      "status": "aguardando",
+      "status": "impedido",
       "voto": null,
       "possivelImpedimento": true
     },
@@ -139,6 +139,10 @@
     {
       "hora": "2026-09-15T10:47:00-03:00",
       "evento": "Fachin discursa sobre independência do STF ('a divergência é legítima, o confronto pessoal não') e descreve o objeto do julgamento."
+    },
+    {
+      "hora": "2026-09-15T11:28:00-03:00",
+      "evento": "Kássio Nunes Marques se declara impedido (presidente do TSE) e deixa o plenário; Toffoli também diz que não vai votar, mas segue acompanhando a sessão."
     }
   ]
 }
