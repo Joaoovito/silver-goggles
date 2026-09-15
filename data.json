@@ -4,8 +4,8 @@
     "assunto": "Abertura de investigação contra o ministro Alexandre de Moraes",
     "data": "2026-09-15",
     "horaPrevista": "10:00",
-    "status": "aguardando",
-    "faseAtual": "A sessão ainda não começou",
+    "status": "em_andamento",
+    "faseAtual": "Abertura da sessão e leitura do relatório",
     "ministroFalando": null,
     "resumoFala": "",
     "inclinacao": {
@@ -131,6 +131,10 @@
     {
       "hora": null,
       "evento": "Painel criado. Aguardando início da sessão amanhã às 10h."
+    },
+    {
+      "hora": "2026-09-15T10:22:58-03:00",
+      "evento": "Sessão extraordinária do STF aberta às 10h para julgar a Pet 16.662."
     }
   ]
 }
