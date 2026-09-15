@@ -6,22 +6,6 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Painel de controle — STF ao vivo</title>
 <link rel="stylesheet" href="assets/style.css">
-<style>
-  .admin-panel { display: flex; flex-direction: column; gap: 10px; }
-  .admin-panel label { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); display: block; margin-bottom: 3px; }
-  .admin-panel input[type=text], .admin-panel input[type=password], .admin-panel select, .admin-panel textarea {
-    width: 100%; padding: 8px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit;
-  }
-  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .row3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; align-items: end; }
-  button { padding: 10px 16px; border: 1px solid var(--line-strong); background: var(--ink); color: var(--paper); font: inherit; cursor: pointer; }
-  button.secondary { background: transparent; color: var(--ink); }
-  button:disabled { opacity: .5; cursor: not-allowed; }
-  .minister-edit-row { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); }
-  #log { font-size: 13px; white-space: pre-wrap; padding: 10px; border: 1px dashed var(--line); min-height: 20px; }
-  #log.ok { color: var(--abrir); }
-  #log.err { color: var(--arquivar); }
-</style>
 </head>
 <body>
 <div class="wrap">
@@ -95,7 +79,7 @@
     </div>
   </div>
 
-  <div class="panel" id="publish-panel" style="display:none">
+  <div class="panel admin-panel" id="publish-panel" style="display:none">
     <button id="btn-publish" style="width:100%; font-size:16px;">Publicar alterações no site</button>
   </div>
 
